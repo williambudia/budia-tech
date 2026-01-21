@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Light Mode */
+  --background: 210 40% 98%;      /* Soft off-white */
+  --foreground: 222 47% 11%;      /* Deep Slate */
+  
+  --primary: 221 83% 53%;         /* Vivid Blue */
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 151 55% 42%;       /* Trustworthy Emerald */
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 16% 47%;
+  
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark Mode - Deep Tech Feel */
+  --background: 222 47% 11%;      /* Deep Slate */
+  --foreground: 210 40% 98%;      /* Soft White */
+  
+  --primary: 217 91% 60%;         /* Lighter Blue for dark bg */
+  --primary-foreground: 222 47% 11%;
+  
+  --secondary: 151 55% 42%;       /* Consistent Emerald */
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+  
+  --card: 222 47% 13%;            /* Slightly lighter than bg */
+  --card-foreground: 210 40% 98%;
+  
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  --ring: 224 76% 48%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+
+@layer utilities {
+  /* .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  } */
+  
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
