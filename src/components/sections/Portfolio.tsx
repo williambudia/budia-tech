@@ -22,7 +22,7 @@ export function Portfolio() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <span className="text-primary font-semibold tracking-wide uppercase text-sm">Experiência Profissional</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">Experiência & Projetos Relevantes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">Experiência e Projetos Relevantes</h2>
             <p className="text-muted-foreground mt-4 text-lg">
               Atuação em projetos enterprise de grande escala, produtos digitais e soluções de IA corporativa.
             </p>
@@ -69,10 +69,10 @@ export function Portfolio() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="pt-4 border-t border-border/50 bg-muted/5">
+                  <CardFooter className="pt-4 border-t border-border/50 bg-muted/5 h-16">
                     {project.tags?.includes("Confidencial") ? (
-                      <span className="text-xs text-muted-foreground/60 italic flex items-center gap-2">
-                        Projeto interno / confidencial – sem link público
+                      <span className="text-xs text-muted-foreground/60 italic flex items-center gap-2 ">
+                        Projeto interno / confidencial - sem link público
                       </span>
                     ) : (
                       <Button variant="ghost" className="w-full justify-between group-hover:text-primary text-xs" disabled>

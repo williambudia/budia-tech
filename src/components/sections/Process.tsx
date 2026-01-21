@@ -8,18 +8,18 @@ const steps = [
   },
   {
     number: "02",
-    title: "Proposta & Estratégia",
-    description: "Apresentamos um plano detalhado com cronograma, tecnologias e o escopo visual do projeto."
+    title: "Proposta e Estratégia",
+    description: "Apresentamos uma proposta completa, com escopo definido, cronograma, tecnologias utilizadas e direcionamento visual do projeto."
   },
   {
     number: "03",
     title: "Desenvolvimento",
-    description: "Nossa equipe codifica seu projeto com as melhores práticas, mantendo você atualizado do progresso."
+    description: "Colocamos o projeto em prática com as melhores práticas de desenvolvimento, mantendo você informado sobre cada etapa da evolução."
   },
   {
     number: "04",
-    title: "Entrega & Suporte",
-    description: "Lançamento oficial, treinamento para uso da plataforma e acompanhamento pós-entrega."
+    title: "Entrega e Suporte",
+    description: "Realizamos o lançamento oficial do projeto, com treinamento para uso da plataforma e acompanhamento pós-entrega para garantir os melhores resultados."
   }
 ];
 

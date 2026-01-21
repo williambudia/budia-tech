@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Leaf, Store, Wrench, Building2 } from "lucide-react";
+import { Leaf, Store, Wrench, Building2, EyeIcon, Globe, ServerIcon, Gauge } from "lucide-react";
 
 const audiences = [
   {
     icon: Leaf,
     title: "Agronegócio",
-    description: "Soluções robustas para produtores e empresas do agro que precisam de presença digital profissional.",
+    description: "Soluções tecnológicas robustas para produtores e empresas do agro que buscam presença digital estratégica.",
     color: "text-green-600",
     bg: "bg-green-100 dark:bg-green-900/20"
   },
@@ -19,18 +19,47 @@ const audiences = [
   {
     icon: Wrench,
     title: "Prestadores de Serviço",
-    description: "Advogados, médicos, consultores e técnicos. Mostre sua autoridade e receba mais contatos.",
+    description: "Advogados, médicos, consultores e técnicos que desejam fortalecer sua autoridade e atrair mais clientes.",
     color: "text-amber-600",
     bg: "bg-amber-100 dark:bg-amber-900/20"
   },
   {
     icon: Building2,
     title: "Empresas B2B",
-    description: "Indústrias e distribuidoras que precisam de catálogos digitais e sistemas de gestão integrados.",
+    description: "Soluções digitais para indústrias e distribuidoras que buscam eficiência com catálogos digitais e gestão integrada.",
+    color: "text-purple-600",
+    bg: "bg-purple-100 dark:bg-purple-900/20"
+  },
+  {
+    icon: Globe,
+    title: "Sites Institucionais",
+    description: "Fortaleça a imagem da sua empresa com um site elegante, profissional e totalmente responsivo.",
+    color: "text-teal-600",
+    bg: "bg-teal-100 dark:bg-teal-900/20"
+  },
+  {
+    icon: Gauge,
+    title: "Desempenho e SEO",
+    description: "Mais velocidade, mais visibilidade e melhores posições no Google.",
+    color: "text-pink-600",
+    bg: "bg-pink-100 dark:bg-pink-900/20"
+  },
+  {
+    icon: EyeIcon,
+    title: "Observabilidade",
+    description: "Já possui um sistema, mas precisa monitorar logs e métricas para tomar decisões rápidas e prevenir problemas? Nós ajudamos você a ganhar visibilidade completa da sua operação.",
+    color: "text-lime-600",
+    bg: "bg-lime-100 dark:bg-lime-900/20"
+  },
+  {
+    icon: ServerIcon,
+    title: "Sistemas WEB",
+    description: "Soluções web personalizadas para automatizar processos, integrar sistemas e escalar seu negócio.",
     color: "text-indigo-600",
     bg: "bg-indigo-100 dark:bg-indigo-900/20"
-  }
+  },
 ];
+
 
 export function TargetAudience() {
   return (
@@ -39,7 +68,7 @@ export function TargetAudience() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Para quem desenvolvemos</h2>
           <p className="text-muted-foreground">
-            Entendemos as particularidades do mercado de Sorriso. Criamos soluções específicas para o seu nicho de atuação.
+            Desenvolvemos soluções sob medida para o seu nicho de atuação, entendendo suas necessidades e desafios específicos.
           </p>
         </div>
 

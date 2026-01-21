@@ -60,7 +60,7 @@ export const projects: Project[] = [
     {
         id: "gruvi-superlogica",
         title: "Superlógica",
-        shortDescription: "App Gruvi – Gestão de Condomínios",
+        shortDescription: "App Gruvi - Gestão de Condomínios",
         problem:
             "Evolução contínua de um produto digital voltado à gestão condominial e vida urbana.",
         solution:
