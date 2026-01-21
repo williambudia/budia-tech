@@ -1,19 +1,44 @@
+"use client";
+
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "../../components/ui/button";
 
+type Theme = "light" | "dark";
+
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
+    const storedTheme = localStorage.getItem("theme") as Theme | null;
+
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList.toggle(
+        "dark",
+        storedTheme === "dark"
+      );
+      return;
+    }
+
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    const systemTheme: Theme = prefersDark ? "dark" : "light";
+    setTheme(systemTheme);
+    document.documentElement.classList.toggle("dark", prefersDark);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.classList.toggle("dark");
+    const nextTheme: Theme = theme === "light" ? "dark" : "light";
+
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    document.documentElement.classList.toggle(
+      "dark",
+      nextTheme === "dark"
+    );
   };
 
   return (
@@ -21,10 +46,13 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="rounded-full w-10 h-10 hover:bg-accent hover:text-accent-foreground transition-colors"
+      className="relative rounded-full w-10 h-10 hover:bg-accent hover:text-accent-foreground transition-colors"
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-amber-500" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
+      {theme === "dark" ? (
+        <Sun className="h-[1.2rem] w-[1.2rem] transition-transform rotate-0 scale-100 text-amber-500" />
+      ) : (
+        <Moon className="h-[1.2rem] w-[1.2rem] transition-transform rotate-0 scale-100 text-primary" />
+      )}
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

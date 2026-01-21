@@ -106,14 +106,14 @@ export function Hero() {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute bottom-2 right-2 bg-card p-4 rounded-xl shadow-xl border border-border/50 max-w-[200px]"
+                className="absolute bottom-2 right-2 bg-card p-4 rounded-xl shadow-xl border border-border/50 max-w-[280px]"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">
                     🚀
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">Performance</p>
+                    <p className="text-xs text-muted-foreground">Garantia de performance</p>
                     <p className="font-bold text-foreground">Otimizada</p>
                   </div>
                 </div>

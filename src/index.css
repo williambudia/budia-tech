@@ -82,9 +82,9 @@
 
 
 @layer utilities {
-  /* .text-gradient {
+  .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
-  } */
+  }
   
   .glass-card {
     @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg;
