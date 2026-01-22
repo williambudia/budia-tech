@@ -14,15 +14,12 @@ import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
 import { useToast } from "../../hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
-export function Contact() {
+export default function Contact() {
     const { toast } = useToast();
-    const reduceMotion = useReducedMotion();
-
 
     const form = useForm<InsertContactMessage>({
         resolver: zodResolver(insertContactMessageSchema),

@@ -60,7 +60,7 @@ const audiences = [
   },
 ];
 
-export function TargetAudience() {
+export default function TargetAudience() {
 
   return (
     <section className="py-20 bg-muted/30">

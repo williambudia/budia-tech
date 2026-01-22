@@ -36,7 +36,7 @@ const services = [
   }
 ];
 
-export function Services() {
+export default function Services() {
 
   return (
     <section id="services" className="py-24 relative overflow-hidden">

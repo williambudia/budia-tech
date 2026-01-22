@@ -5,7 +5,7 @@ import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
-export function Portfolio() {
+export default function Portfolio() {
   const { data: projects, isLoading } = useProjects();
 
   if (isLoading) {

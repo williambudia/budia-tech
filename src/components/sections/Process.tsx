@@ -23,7 +23,7 @@ const steps = [
   }
 ];
 
-export function Process() {
+export default function Process() {
 
   return (
     <section id="process" className="py-24 bg-card dark:bg-accent relative overflow-hidden">

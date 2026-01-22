@@ -1,15 +1,17 @@
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { Hero } from "../components/sections/Hero";
-import { TargetAudience } from "../components/sections/TargetAudience";
-import { Services } from "../components/sections/Services";
-import { Process } from "../components/sections/Process";
-import { Portfolio } from "../components/sections/Portfolio";
-import { FinalCTA } from "../components/sections/FinalCTA";
 import { MessageCircle } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Contact } from "../components/sections/Contact";
 import { MotionSafeDiv } from "../components/motion/MotionSafeDiv";
+import React, { Suspense } from "react";
+
+const TargetAudience = React.lazy(() => import("../components/sections/TargetAudience"));
+const Services = React.lazy(() => import("../components/sections/Services"));
+const Process = React.lazy(() => import("../components/sections/Process"));
+const Portfolio = React.lazy(() => import("../components/sections/Portfolio"));
+const Contact = React.lazy(() => import("../components/sections/Contact"));
+const FinalCTA = React.lazy(() => import("../components/sections/FinalCTA"));
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -31,12 +33,14 @@ export default function Home() {
 
       <main>
         <Hero />
-        <TargetAudience />
-        <Services />
-        <Process />
-        <Portfolio />
-        <Contact />
-        <FinalCTA />
+        <Suspense fallback={null}>
+          <TargetAudience />
+          <Services />
+          <Process />
+          <Portfolio />
+          <Contact />
+          <FinalCTA />
+        </Suspense>
       </main>
 
       <Footer />

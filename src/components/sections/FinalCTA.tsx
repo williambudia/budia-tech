@@ -2,7 +2,7 @@ import { Button } from "../../components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
-export function FinalCTA() {
+export default function FinalCTA() {
 
   return (
     <section className="py-24 relative overflow-hidden bg-accent dark:bg-card">
