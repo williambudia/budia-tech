@@ -22,7 +22,7 @@ export const projects: Project[] = [
         problem:
             "Necessidade de uma presença digital global robusta, escalável e alinhada à estratégia corporativa.",
         solution:
-            "Desenvolvimento e estruturação do frontend do portal institucional, com foco em performance, SEO e experiência do usuário.",
+            "Desenvolvimento e estruturação do site institucional, com foco em performance, SEO e experiência do usuário.",
         result:
             "Plataforma de alta disponibilidade, utilizada por públicos institucionais, investidores e sociedade em geral.",
         imageUrl:

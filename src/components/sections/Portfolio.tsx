@@ -59,7 +59,11 @@ export function Portfolio() {
                   <CardContent className="flex-1 space-y-4 pt-4">
                     <div className="space-y-4 text-sm">
                       <div>
-                        <span className="font-semibold text-foreground/90 block mb-1">Contexto & Responsabilidades</span>
+                        <span className="font-semibold text-foreground/90 block mb-1">Desafio</span>
+                        <p className="text-muted-foreground leading-relaxed">{project.problem}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground/90 block mb-1">Contexto e Responsabilidades</span>
                         <p className="text-muted-foreground leading-relaxed">{project.solution}</p>
                       </div>
                       <div>
