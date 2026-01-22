@@ -1,14 +1,12 @@
 import { useProjects } from "../../hooks/use-projects";
-import { motion } from "framer-motion";
 import { ExternalLink, Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 export function Portfolio() {
   const { data: projects, isLoading } = useProjects();
-  const reduceMotion = useReducedMotion();
 
   if (isLoading) {
     return (
@@ -38,10 +36,9 @@ export function Portfolio() {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div
+              <MotionSafeDiv
                 key={project.id}
-                initial={reduceMotion ? false : { opacity: 0, scale: 0.95 }}
-                animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -89,7 +86,7 @@ export function Portfolio() {
                     )}
                   </CardFooter>
                 </Card>
-              </motion.div>
+              </MotionSafeDiv>
             ))}
           </div>
         )}

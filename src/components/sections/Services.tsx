@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import { Layout, Smartphone, Gauge, Settings, Database, BarChart3 } from "lucide-react";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const services = [
   {
@@ -38,7 +37,6 @@ const services = [
 ];
 
 export function Services() {
-  const reduceMotion = useReducedMotion();
 
   return (
     <section id="services" className="py-24 relative overflow-hidden">
@@ -51,10 +49,9 @@ export function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <MotionSafeDiv
               key={service.title}
-              initial={reduceMotion ? false : { opacity: 0 }}
-              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
@@ -70,7 +67,7 @@ export function Services() {
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </MotionSafeDiv>
           ))}
         </div>
       </div>

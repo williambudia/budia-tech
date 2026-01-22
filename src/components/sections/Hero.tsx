@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
 import { Button } from "../../components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroDashboard from "../../assets/images/hero-dashboard.png";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 export function Hero() {
   return (
@@ -12,7 +12,7 @@ export function Hero() {
 
       <div className="container-padding relative">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <motion.div
+          <MotionSafeDiv
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -67,9 +67,9 @@ export function Hero() {
                 Suporte Dedicado
               </div>
             </div>
-          </motion.div>
+          </MotionSafeDiv>
 
-          <motion.div
+          <MotionSafeDiv
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -104,7 +104,7 @@ export function Hero() {
                 </div>
 
                 {/* Decorative floating element */}
-                <motion.div
+                <MotionSafeDiv
                   animate={{ y: [0, -15, 0] }}
                   transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
                   className="absolute bottom-10 right-10 bg-card/90 backdrop-blur-md p-4 rounded-2xl shadow-2xl border border-border/50 min-w-[180px] z-30 hidden lg:block"
@@ -118,10 +118,10 @@ export function Hero() {
                       <p className="text-sm font-bold text-foreground mt-1">99% Otimizada</p>
                     </div>
                   </div>
-                </motion.div>
+                </MotionSafeDiv>
               </div>
             </div>
-          </motion.div>
+          </MotionSafeDiv>
         </div>
       </div>
     </section>

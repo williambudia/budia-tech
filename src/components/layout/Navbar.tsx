@@ -3,7 +3,8 @@ import { Menu, X, Rocket } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const navItems = [
   { label: "Início", href: "#hero" },
@@ -128,7 +129,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
+          <MotionSafeDiv
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -157,7 +158,7 @@ export function Navbar() {
                 Falar no WhatsApp
               </Button>
             </div>
-          </motion.div>
+          </MotionSafeDiv>
         )}
       </AnimatePresence>
     </nav>

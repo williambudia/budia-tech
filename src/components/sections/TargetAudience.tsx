@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import { Leaf, Store, Wrench, Building2, EyeIcon, Globe, ServerIcon, Gauge } from "lucide-react";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const audiences = [
   {
@@ -61,9 +60,7 @@ const audiences = [
   },
 ];
 
-
 export function TargetAudience() {
-  const reduceMotion = useReducedMotion();
 
   return (
     <section className="py-20 bg-muted/30">
@@ -77,10 +74,9 @@ export function TargetAudience() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {audiences.map((item, index) => (
-            <motion.div
+            <MotionSafeDiv
               key={item.title}
-              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
@@ -93,7 +89,7 @@ export function TargetAudience() {
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {item.description}
               </p>
-            </motion.div>
+            </MotionSafeDiv>
           ))}
         </div>
       </div>

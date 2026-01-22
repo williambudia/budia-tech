@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const steps = [
   {
@@ -25,7 +24,6 @@ const steps = [
 ];
 
 export function Process() {
-  const reduceMotion = useReducedMotion();
 
   return (
     <section id="process" className="py-24 bg-card dark:bg-accent relative overflow-hidden">
@@ -46,10 +44,9 @@ export function Process() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <motion.div
+            <MotionSafeDiv
               key={step.number}
-              initial={reduceMotion ? false : { opacity: 0, y: 30 }}
-              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
@@ -64,7 +61,7 @@ export function Process() {
                   {step.description}
                 </p>
               </div>
-            </motion.div>
+            </MotionSafeDiv>
           ))}
         </div>
       </div>

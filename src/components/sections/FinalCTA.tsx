@@ -1,17 +1,14 @@
 import { Button } from "../../components/ui/button";
 import { MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
-import { useReducedMotion } from "../../hooks/use-reduceMotion";
+import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 export function FinalCTA() {
-  const reduceMotion = useReducedMotion();
 
   return (
     <section className="py-24 relative overflow-hidden bg-accent dark:bg-card">
       <div className="container-padding relative z-10 text-center">
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-          animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
+        <MotionSafeDiv
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-3xl mx-auto space-y-8"
@@ -38,7 +35,7 @@ export function FinalCTA() {
           <p className="text-sm text-muted-foreground mt-8">
             Atendimento exclusivo para Sorriso e região do Norte de Mato Grosso.
           </p>
-        </motion.div>
+        </MotionSafeDiv>
       </div>
     </section>
   );
