@@ -13,13 +13,15 @@ import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
 import { useToast } from "../../hooks/use-toast";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 export function Contact() {
     const { toast } = useToast();
+    const reduceMotion = useReducedMotion();
+
 
     const form = useForm<InsertContactMessage>({
         resolver: zodResolver(insertContactMessageSchema),
@@ -78,7 +80,8 @@ export function Contact() {
                 <div className="grid lg:grid-cols-2 gap-16 items-start">
                     {/* Info Side */}
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={reduceMotion ? false : { opacity: 0, x: -20 }}
+                        animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         className="space-y-8"
@@ -135,8 +138,9 @@ export function Contact() {
 
                     {/* Form Side */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={reduceMotion ? false : { opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="bg-card p-8 rounded-3xl border border-border/50 shadow-xl"
                     >

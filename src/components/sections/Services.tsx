@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Layout, Smartphone, Gauge, Settings, Database, BarChart3 } from "lucide-react";
 
 const services = [
@@ -37,6 +37,8 @@ const services = [
 ];
 
 export function Services() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="container-padding relative z-10">
@@ -50,15 +52,15 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0 }}
+              initial={reduceMotion ? false : { opacity: 0 }}
+              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`p-8 rounded-3xl border transition-all duration-300 ${
-                service.highlight 
-                  ? "bg-gradient-to-br from-primary/5 to-transparent border-primary/20 hover:border-primary/50" 
-                  : "bg-card border-border/50 hover:border-primary/30"
-              } hover:shadow-lg group`}
+              className={`p-8 rounded-3xl border transition-all duration-300 ${service.highlight
+                ? "bg-gradient-to-br from-primary/5 to-transparent border-primary/20 hover:border-primary/50"
+                : "bg-card border-border/50 hover:border-primary/30"
+                } hover:shadow-lg group`}
             >
               <div className="w-14 h-14 rounded-2xl bg-background border border-border flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 <service.icon className="w-7 h-7" />

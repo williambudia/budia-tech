@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 const steps = [
   {
@@ -24,6 +24,8 @@ const steps = [
 ];
 
 export function Process() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section id="process" className="py-24 bg-card dark:bg-accent relative overflow-hidden">
       {/* Abstract lines */}
@@ -45,7 +47,8 @@ export function Process() {
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 30 }}
+              initial={reduceMotion ? false : { opacity: 0, y: 30 }}
+              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}

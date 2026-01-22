@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Leaf, Store, Wrench, Building2, EyeIcon, Globe, ServerIcon, Gauge } from "lucide-react";
 
 const audiences = [
@@ -62,6 +62,8 @@ const audiences = [
 
 
 export function TargetAudience() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container-padding">
@@ -76,7 +78,8 @@ export function TargetAudience() {
           {audiences.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+              animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}

@@ -1,5 +1,5 @@
 import { useProjects } from "../../hooks/use-projects";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ExternalLink, Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
@@ -7,6 +7,7 @@ import { Button } from "../../components/ui/button";
 
 export function Portfolio() {
   const { data: projects, isLoading } = useProjects();
+  const reduceMotion = useReducedMotion();
 
   if (isLoading) {
     return (
@@ -38,7 +39,8 @@ export function Portfolio() {
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={reduceMotion ? false : { opacity: 0, scale: 0.95 }}
+                animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -55,7 +57,7 @@ export function Portfolio() {
                     <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="text-sm font-medium text-primary/80">{project.shortDescription}</p>
                   </CardHeader>
-                  
+
                   <CardContent className="flex-1 space-y-4 pt-4">
                     <div className="space-y-4 text-sm">
                       <div>
