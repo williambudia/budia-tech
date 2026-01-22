@@ -13,8 +13,9 @@ import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Button } from "../../components/ui/button";
 import { useToast } from "../../hooks/use-toast";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useReducedMotion } from "../../hooks/use-reduceMotion";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 

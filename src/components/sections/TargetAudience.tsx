@@ -1,5 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Leaf, Store, Wrench, Building2, EyeIcon, Globe, ServerIcon, Gauge } from "lucide-react";
+import { useReducedMotion } from "../../hooks/use-reduceMotion";
 
 const audiences = [
   {

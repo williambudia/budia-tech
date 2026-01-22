@@ -1,9 +1,10 @@
 import { useProjects } from "../../hooks/use-projects";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ExternalLink, Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "../../components/ui/card";
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
+import { useReducedMotion } from "../../hooks/use-reduceMotion";
 
 export function Portfolio() {
   const { data: projects, isLoading } = useProjects();

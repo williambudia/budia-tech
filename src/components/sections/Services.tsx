@@ -1,5 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Layout, Smartphone, Gauge, Settings, Database, BarChart3 } from "lucide-react";
+import { useReducedMotion } from "../../hooks/use-reduceMotion";
 
 const services = [
   {
