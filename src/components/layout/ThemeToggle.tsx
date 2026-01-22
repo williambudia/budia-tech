@@ -7,7 +7,7 @@ import { Button } from "../../components/ui/button";
 type Theme = "light" | "dark";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme | null;

@@ -15,10 +15,10 @@ function Router() {
 
 function App() {
   return (
-      <TooltipProvider>
-        <Router />
-        <Toaster />
-      </TooltipProvider>
+    <TooltipProvider>
+      <Router />
+      <Toaster />
+    </TooltipProvider>
   );
 }
 

@@ -8,6 +8,7 @@ import { Portfolio } from "../components/sections/Portfolio";
 import { FinalCTA } from "../components/sections/FinalCTA";
 import { MessageCircle } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { Contact } from "../components/sections/Contact";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -26,13 +27,14 @@ export default function Home() {
       />
 
       <Navbar />
-      
+
       <main>
         <Hero />
         <TargetAudience />
         <Services />
         <Process />
         <Portfolio />
+        <Contact />
         <FinalCTA />
       </main>
 
