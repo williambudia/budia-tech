@@ -16,19 +16,50 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  /* ===========================
+     Detecta scroll
+  ============================ */
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  /* ===========================
+     Scroll real com offset
+  ============================ */
+  const doScroll = (id: string) => {
     const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!element) return;
+
+    const yOffset = 0; // altura da navbar
+    const y =
+      element.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  };
+
+  /* ===========================
+     Scroll acionado pelo menu
+  ============================ */
+  const handleNavClick = (id: string, isMobile = false) => {
+    if (isMobile) {
       setIsMobileMenuOpen(false);
+
+      // espera animação do menu fechar
+      setTimeout(() => {
+        doScroll(id);
+      }, 300);
+    } else {
+      doScroll(id);
     }
   };
 
@@ -37,15 +68,15 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-border/50 shadow-sm py-3"
+          ? "bg-background/80 backdrop-blur-lg border-border/50 shadow-sm py-5"
           : "bg-transparent py-5"
       )}
     >
       <div className="container-padding flex items-center justify-between">
         {/* Logo */}
-        <div 
+        <div
           className="flex items-center gap-2 font-display font-bold text-xl md:text-2xl cursor-pointer"
-          onClick={() => scrollToSection('#hero')}
+          onClick={() => handleNavClick("#hero")}
         >
           <div className="bg-primary/10 p-2 rounded-lg">
             <Rocket className="w-6 h-6 text-primary" />
@@ -60,7 +91,7 @@ export function Navbar() {
           {navItems.map((item) => (
             <button
               key={item.label}
-              onClick={() => scrollToSection(item.href)}
+              onClick={() => handleNavClick(item.href)}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {item.label}
@@ -68,12 +99,14 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Actions */}
+        {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button 
+          <Button
             className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20"
-            onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
+            onClick={() =>
+              window.open("https://wa.me/5566997150476", "_blank")
+            }
           >
             Falar no WhatsApp
           </Button>
@@ -85,7 +118,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
@@ -99,21 +132,27 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden border-t border-border bg-background"
           >
             <div className="flex flex-col p-4 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() =>
+                    handleNavClick(item.href, true)
+                  }
                   className="text-left py-2 font-medium text-foreground hover:text-primary"
                 >
                   {item.label}
                 </button>
               ))}
-              <Button 
+
+              <Button
                 className="w-full rounded-full"
-                onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
+                onClick={() =>
+                  window.open("https://wa.me/5566997150476", "_blank")
+                }
               >
                 Falar no WhatsApp
               </Button>
