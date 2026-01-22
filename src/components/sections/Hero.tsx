@@ -35,7 +35,7 @@ export function Hero() {
             <Button 
               size="lg" 
               className="rounded-full text-base font-semibold px-8 h-12 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
-              onClick={() => window.open("https://wa.me/5566999999999", "_blank")}
+              onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
             >
               Falar com especialista
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -73,7 +73,7 @@ export function Hero() {
           className="relative lg:h-[600px] flex items-center justify-center"
         >
           {/* Abstract geometric composition */}
-          <div className="relative w-full h-full max-w-[500px] max-h-[500px]">
+          <div className="relative w-full h-full max-h-[500px]">
             {/* Main Image Container */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl transform rotate-3" />
             
@@ -90,11 +90,11 @@ export function Hero() {
               {/* Content Area */}
               <div className="flex-1 p-6 relative bg-gradient-to-br from-background to-muted/30">
                  {/* Hero abstract graphic */}
-                 <div className="w-full h-32 bg-primary/10 rounded-xl mb-4 animate-pulse" />
+                 <img className="w-full h-32 bg-primary/10 rounded-xl mb-4 animate-pulse w-full" src="https://thumbs.dreamstime.com/b/corporate-branding-mockup-featuring-erp-dashboard-multiple-devices-365286891.jpg?w=1400"/>
                  <div className="grid grid-cols-3 gap-4">
-                    <div className="h-24 bg-secondary/10 rounded-xl" />
-                    <div className="h-24 bg-muted rounded-xl" />
-                    <div className="h-24 bg-primary/5 rounded-xl" />
+                    <img className="h-24 bg-secondary/10 rounded-xl" src="https://tse1.mm.bing.net/th/id/OIP.PIC54gH2Sv9jCPXWRUu7IwHaEU?rs=1&pid=ImgDetMain&o=7&rm=3"/>
+                    <img className="h-24 bg-muted rounded-xl"src="https://tse4.mm.bing.net/th/id/OIP.9RrpJOe_WskumSj9rK3BfgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" />
+                    <img className="h-24 bg-primary/5 rounded-xl" src="https://tse4.mm.bing.net/th/id/OIP.9RrpJOe_WskumSj9rK3BfgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"/>
                  </div>
                  <div className="mt-6 space-y-3">
                    <div className="h-3 w-3/4 bg-muted-foreground/10 rounded-full" />

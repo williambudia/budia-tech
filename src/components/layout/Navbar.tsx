@@ -73,7 +73,7 @@ export function Navbar() {
           <ThemeToggle />
           <Button 
             className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20"
-            onClick={() => window.open("https://wa.me/5566999999999", "_blank")}
+            onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
           >
             Falar no WhatsApp
           </Button>
@@ -113,7 +113,7 @@ export function Navbar() {
               ))}
               <Button 
                 className="w-full rounded-full"
-                onClick={() => window.open("https://wa.me/5566999999999", "_blank")}
+                onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
               >
                 Falar no WhatsApp
               </Button>
