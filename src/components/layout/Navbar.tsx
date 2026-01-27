@@ -11,6 +11,7 @@ const navItems = [
   { label: "Serviços", href: "#services" },
   { label: "Processo", href: "#process" },
   { label: "Portfólio", href: "#portfolio" },
+  { label: "Fale conosco", href: "#contact" },
 ];
 
 export function Navbar() {

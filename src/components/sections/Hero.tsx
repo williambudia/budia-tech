@@ -38,7 +38,7 @@ export function Hero() {
               <Button
                 size="lg"
                 className="rounded-full text-base font-semibold px-8 h-12 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
-                onClick={() => window.open("https://wa.me/5566999999999", "_blank")}
+                onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
               >
                 Falar com especialista
                 <ArrowRight className="ml-2 w-4 h-4" />
