@@ -83,7 +83,7 @@ export function Navbar() {
             <Rocket className="w-6 h-6 text-primary" />
           </div>
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground">
-            Budia Tech
+            BudiaTech
           </span>
         </div>
 

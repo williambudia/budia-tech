@@ -27,7 +27,7 @@ export function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 drop-shadow-sm">
-              Soluções web modernas para <span className="text-gradient">empresas que crescem</span>.
+              Soluções modernas para <span className="text-gradient">empresas que não param de crescer</span>.
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed bg-background/20 backdrop-blur-[2px] rounded-lg p-1">

@@ -12,7 +12,7 @@ export function Footer() {
                 <Rocket className="w-6 h-6 text-primary" />
               </div>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground">
-                Budia Tech
+                BudiaTech
               </span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Budia Tech. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} BudiaTech. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
