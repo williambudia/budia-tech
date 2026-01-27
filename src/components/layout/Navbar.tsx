@@ -3,7 +3,6 @@ import { Menu, X, Rocket } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
-import { AnimatePresence } from "framer-motion";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 const navItems = [
@@ -105,7 +104,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <Button
-            className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20"
+            className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow shadow-primary/20"
             onClick={() =>
               window.open("https://wa.me/5566997150476", "_blank")
             }
@@ -128,7 +127,7 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <div>
         {isMobileMenuOpen && (
           <MotionSafeDiv
             initial={{ opacity: 0, height: 0 }}
@@ -161,7 +160,7 @@ export function Navbar() {
             </div>
           </MotionSafeDiv>
         )}
-      </AnimatePresence>
+      </div>
     </nav>
   );
 }

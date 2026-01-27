@@ -24,7 +24,7 @@ export default function FinalCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover-elevate active-elevate-2 text-lg px-8 h-14 rounded-full shadow-lg"
+              className="bg-primary text-primary-foreground hover-elevate active-elevate-2 text-lg px-8 h-14 rounded-full shadow"
               onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
             >
               <MessageCircle className="mr-2 w-5 h-5" />

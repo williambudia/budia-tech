@@ -37,7 +37,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="rounded-full text-base font-semibold px-8 h-12 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                className="rounded-full text-base font-semibold px-8 h-12 shadow shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
                 onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
               >
                 Falar com especialista

@@ -222,7 +222,7 @@ export default function Contact() {
                                     type="submit"
                                     aria-label="Enviar formulário de contato"
                                     disabled={form.formState.isSubmitting}
-                                    className="w-full h-12 text-base font-bold rounded-xl shadow-lg shadow-primary/20"
+                                    className="w-full h-12 text-base font-bold rounded-xl shadow shadow-primary/20"
                                 >
                                     {form.formState.isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                                     <Send className="ml-2 w-4 h-4" />
