@@ -1,6 +1,7 @@
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { Hero } from "../components/sections/Hero";
+import { PromoBanner } from "../components/sections/PromoBanner";
 import { MessageCircle } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { MotionSafeDiv } from "../components/motion/MotionSafeDiv";
@@ -33,6 +34,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <PromoBanner />
         <Suspense fallback={null}>
           <TargetAudience />
           <Services />
