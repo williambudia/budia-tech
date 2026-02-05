@@ -1,6 +1,6 @@
 import { Button } from "../../components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import heroDashboard from "../../assets/images/hero-dashboard.png";
+import heroDashboard from "../../assets/images/hero-dashboard-optimized.png";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 
 export function Hero() {

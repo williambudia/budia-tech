@@ -1,4 +1,4 @@
-import { motion, type MotionProps } from "framer-motion";
+import { m, type MotionProps } from "framer-motion";
 import type { PropsWithChildren, HTMLAttributes, JSX } from "react";
 import { useMotionSafe } from "../../hooks/use-motionSafe";
 
@@ -22,7 +22,7 @@ export function MotionSafeDiv({
         return <Component {...props}>{children}</Component>;
     }
 
-    const MotionComponent = motion[as as keyof typeof motion] as any;
+    const MotionComponent = m[as as keyof typeof m] as any;
 
     return <MotionComponent {...props}>{children}</MotionComponent>;
 }
