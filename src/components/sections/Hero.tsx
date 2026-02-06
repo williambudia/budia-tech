@@ -2,10 +2,13 @@ import { Button } from "../../components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroDashboard from "../../assets/images/hero-dashboard-optimized.png";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
-    <section id="hero" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section id="hero" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] block">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-[120px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-secondary/5 blur-[100px] rounded-full -z-10" />
@@ -23,15 +26,15 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Atendimento local em Sorriso/MT
+              {t("hero.badge")}
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 drop-shadow-sm">
-              Soluções modernas para <span className="text-gradient">empresas que não param de crescer</span>.
+              {t("hero.title")} <span className="text-gradient">{t("hero.titleStrong")}</span>.
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed bg-background/20 backdrop-blur-[2px] rounded-lg p-1">
-              Desenvolvemos sites profissionais, sistemas web e landing pages focadas em conversão. Tecnologia de ponta para destacar seu negócio no mercado.
+              {t("hero.description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -40,7 +43,7 @@ export function Hero() {
                 className="rounded-full text-base font-semibold px-8 h-12 shadow shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
                 onClick={() => window.open("https://wa.me/5566997150476", "_blank")}
               >
-                Falar com especialista
+                {t("hero.cta")}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button
@@ -49,22 +52,22 @@ export function Hero() {
                 className="rounded-full text-base h-12 border-2 hover:bg-muted/50 backdrop-blur-sm"
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Ver projetos
+                {t("hero.portfolio")}
               </Button>
             </div>
 
             <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-secondary" />
-                Design Premium
+                {t("hero.benefits.design")}
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-secondary" />
-                Alta Performance
+                {t("hero.benefits.performance")}
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-secondary" />
-                Suporte Dedicado
+                {t("hero.benefits.support")}
               </div>
             </div>
           </MotionSafeDiv>
@@ -114,8 +117,8 @@ export function Hero() {
                       🚀
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground leading-none">Performance</p>
-                      <p className="text-sm font-bold text-foreground mt-1">99% Otimizada</p>
+                      <p className="text-xs text-muted-foreground leading-none">{t("hero.floatingCard.title")}</p>
+                      <p className="text-sm font-bold text-foreground mt-1">{t("hero.floatingCard.value")}</p>
                     </div>
                   </div>
                 </MotionSafeDiv>

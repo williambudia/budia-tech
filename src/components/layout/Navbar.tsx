@@ -1,24 +1,27 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Rocket, ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
 import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 import { useLocation, Link } from "wouter";
-
-const navItems = [
-  { label: "Início", href: "#hero" },
-  { label: "Serviços", href: "#services" },
-  { label: "Processo", href: "#process" },
-  { label: "Portfólio", href: "#portfolio" },
-  { label: "Fale conosco", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { t } = useTranslation();
   const isPromotional = location === "/promocao";
+
+  const navItems = [
+    { label: t("navbar.home"), href: "#hero" },
+    { label: t("navbar.services"), href: "#services" },
+    { label: t("navbar.process"), href: "#process" },
+    { label: t("navbar.portfolio"), href: "#portfolio" },
+    { label: t("navbar.contact"), href: "#contact" },
+  ];
 
   /* ===========================
      Detecta scroll
@@ -111,7 +114,7 @@ export function Navbar() {
             <Link href="/">
               <Button variant="ghost" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
-                Voltar para Início
+                {t("navbar.backToHome")}
               </Button>
             </Link>
           )}
@@ -120,18 +123,20 @@ export function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
+          <LanguageToggle />
           <Button
             className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow shadow-primary/20"
             onClick={() =>
               window.open("https://wa.me/5566997150476", "_blank")
             }
           >
-            Falar no WhatsApp
+            {t("navbar.cta")}
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
           <ThemeToggle />
           {!isPromotional && (
             <Button
@@ -174,7 +179,7 @@ export function Navbar() {
                   window.open("https://wa.me/5566997150476", "_blank")
                 }
               >
-                Falar no WhatsApp
+                {t("navbar.cta")}
               </Button>
             </div>
           </MotionSafeDiv>

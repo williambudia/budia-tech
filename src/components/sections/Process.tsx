@@ -1,29 +1,31 @@
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
-
-const steps = [
-  {
-    number: "01",
-    title: "Entendimento",
-    description: "Reunião inicial para compreender seus objetivos, público-alvo e necessidades específicas do negócio."
-  },
-  {
-    number: "02",
-    title: "Proposta e Estratégia",
-    description: "Apresentamos uma proposta completa, com escopo definido, cronograma, tecnologias utilizadas e direcionamento visual do projeto."
-  },
-  {
-    number: "03",
-    title: "Desenvolvimento",
-    description: "Colocamos o projeto em prática com as melhores práticas de desenvolvimento, mantendo você informado sobre cada etapa da evolução."
-  },
-  {
-    number: "04",
-    title: "Entrega e Suporte",
-    description: "Realizamos o lançamento oficial do projeto, com treinamento para uso da plataforma e acompanhamento pós-entrega para garantir os melhores resultados."
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Process() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: "01",
+      title: t("process.step1.title"),
+      description: t("process.step1.desc")
+    },
+    {
+      number: "02",
+      title: t("process.step2.title"),
+      description: t("process.step2.desc")
+    },
+    {
+      number: "03",
+      title: t("process.step3.title"),
+      description: t("process.step3.desc")
+    },
+    {
+      number: "04",
+      title: t("process.step4.title"),
+      description: t("process.step4.desc")
+    }
+  ];
 
   return (
     <section id="process" className="py-24 bg-card dark:bg-accent relative overflow-hidden">
@@ -36,9 +38,9 @@ export default function Process() {
 
       <div className="container-padding relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">Como trabalhamos</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">{t("process.title")}</h2>
           <p className="text-muted-foreground text-lg">
-            Um processo transparente e organizado, do primeiro café até o site no ar.
+            {t("process.subtitle")}
           </p>
         </div>
 

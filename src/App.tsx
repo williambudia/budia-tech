@@ -6,6 +6,7 @@ import NotFound from "./pages/not-found";
 import Home from "./pages/Home";
 import Promotional from "./pages/Promotional";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
+import "./i18n";
 
 function Router() {
   return (

@@ -1,6 +1,9 @@
 import { Rocket, Instagram, Linkedin, Facebook } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-background border-t border-border pt-16 pb-8">
       <div className="container-padding">
@@ -16,8 +19,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">
-              Transformando ideias em soluções digitais de alto impacto. 
-              Tecnologia, design e estratégia para empresas que querem crescer.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all">
@@ -34,18 +36,18 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Menu</h4>
+            <h4 className="font-bold text-lg mb-4">{t("footer.menuTitle")}</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li><a href="#hero" className="hover:text-primary transition-colors">Início</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Serviços</a></li>
-              <li><a href="#portfolio" className="hover:text-primary transition-colors">Portfólio</a></li>
-              <li><a href="#process" className="hover:text-primary transition-colors">Processo</a></li>
+              <li><a href="#hero" className="hover:text-primary transition-colors">{t("navbar.home")}</a></li>
+              <li><a href="#services" className="hover:text-primary transition-colors">{t("navbar.services")}</a></li>
+              <li><a href="#portfolio" className="hover:text-primary transition-colors">{t("navbar.portfolio")}</a></li>
+              <li><a href="#process" className="hover:text-primary transition-colors">{t("navbar.process")}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Contato</h4>
+            <h4 className="font-bold text-lg mb-4">{t("footer.contactTitle")}</h4>
             <ul className="space-y-3 text-muted-foreground">
               <li>Sorriso, Mato Grosso</li>
               <li>contato@budiatech.com.br</li>
@@ -55,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} BudiaTech. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} BudiaTech. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>

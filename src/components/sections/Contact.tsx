@@ -15,11 +15,13 @@ import { Button } from "../../components/ui/button";
 import { useToast } from "../../hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
+import { useTranslation } from "react-i18next";
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 export default function Contact() {
     const { toast } = useToast();
+    const { t } = useTranslation();
 
     const form = useForm<InsertContactMessage>({
         resolver: zodResolver(insertContactMessageSchema),
@@ -58,15 +60,15 @@ export default function Contact() {
             }
 
             toast({
-                title: "Mensagem enviada com sucesso!",
-                description: "Entraremos em contato em breve 🚀",
+                title: t("contact.form.successTitle"),
+                description: t("contact.form.successDesc"),
             });
 
             form.reset();
         } catch {
             toast({
-                title: "Erro ao enviar",
-                description: "Tente novamente ou fale conosco pelo WhatsApp.",
+                title: t("contact.form.errorTitle"),
+                description: t("contact.form.errorDesc"),
                 variant: "destructive",
             });
         }
@@ -86,14 +88,13 @@ export default function Contact() {
                     >
                         <div>
                             <span className="text-primary font-semibold uppercase text-sm">
-                                Contato
+                                {t("contact.badge")}
                             </span>
                             <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">
-                                Vamos conversar?
+                                {t("contact.title")}
                             </h2>
                             <p className="text-muted-foreground text-lg">
-                                Tem um projeto em mente ou precisa de uma solução sob medida?
-                                Estamos prontos para ajudar sua empresa a crescer.
+                                {t("contact.description")}
                             </p>
                         </div>
 
@@ -102,7 +103,7 @@ export default function Contact() {
                                 <Phone className="w-6 h-6" />
                             </div>
                             <div>
-                                <p className="font-bold">WhatsApp</p>
+                                <p className="font-bold">{t("contact.whatsapp")}</p>
                                 <p className="text-muted-foreground">(66) 99715-0476</p>
                             </div>
                         </div>
@@ -113,7 +114,7 @@ export default function Contact() {
                                     <Mail className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="font-bold">E-mail</p>
+                                    <p className="font-bold">{t("contact.email")}</p>
                                     <p className="text-muted-foreground">
                                         contato@budiatech.com.br
                                     </p>
@@ -125,9 +126,9 @@ export default function Contact() {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="font-bold">Localização</p>
+                                    <p className="font-bold">{t("contact.location")}</p>
                                     <p className="text-muted-foreground">
-                                        Sorriso, MT — Atendimento Nacional
+                                        {t("contact.fullLocation")}
                                     </p>
                                 </div>
                             </div>
@@ -161,9 +162,9 @@ export default function Contact() {
                                     name="name"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Nome Completo</FormLabel>
+                                            <FormLabel>{t("contact.form.name")}</FormLabel>
                                             <FormControl>
-                                                <Input {...field} placeholder="Seu nome" />
+                                                <Input {...field} placeholder={t("contact.form.namePlaceholder")} />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -176,9 +177,9 @@ export default function Contact() {
                                         name="email"
                                         render={({ field }) => (
                                             <FormItem>
-                                                <FormLabel>E-mail</FormLabel>
+                                                <FormLabel>{t("contact.form.email")}</FormLabel>
                                                 <FormControl>
-                                                    <Input {...field} placeholder="seu@email.com" />
+                                                    <Input {...field} placeholder={t("contact.form.emailPlaceholder")} />
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
@@ -190,9 +191,9 @@ export default function Contact() {
                                         name="subject"
                                         render={({ field }) => (
                                             <FormItem>
-                                                <FormLabel>Assunto</FormLabel>
+                                                <FormLabel>{t("contact.form.subject")}</FormLabel>
                                                 <FormControl>
-                                                    <Input {...field} placeholder="Ex: Novo projeto" />
+                                                    <Input {...field} placeholder={t("contact.form.subjectPlaceholder")} />
                                                 </FormControl>
                                                 <FormMessage />
                                             </FormItem>
@@ -205,11 +206,11 @@ export default function Contact() {
                                     name="message"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Mensagem</FormLabel>
+                                            <FormLabel>{t("contact.form.message")}</FormLabel>
                                             <FormControl>
                                                 <Textarea
                                                     {...field}
-                                                    placeholder="Conte-nos um pouco sobre sua necessidade..."
+                                                    placeholder={t("contact.form.messagePlaceholder")}
                                                     className="min-h-[120px]"
                                                 />
                                             </FormControl>
@@ -224,20 +225,20 @@ export default function Contact() {
                                     disabled={form.formState.isSubmitting}
                                     className="w-full h-12 text-base font-bold rounded-xl shadow shadow-primary/20"
                                 >
-                                    {form.formState.isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                                    {form.formState.isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
                                     <Send className="ml-2 w-4 h-4" />
                                 </Button>
 
                                 {/* Fallback WhatsApp */}
                                 <p className="text-center text-sm text-muted-foreground">
-                                    Prefere falar agora?{" "}
+                                    {t("contact.fallback")}{" "}
                                     <a
                                         href="https://wa.me/5566997150476"
                                         className="text-primary font-semibold hover:underline"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Chamar no WhatsApp
+                                        {t("contact.whatsappAction")}
                                     </a>
                                 </p>
                             </form>

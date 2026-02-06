@@ -4,9 +4,11 @@ import { Card, CardContent, CardFooter, CardHeader } from "../../components/ui/c
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
+import { useTranslation } from "react-i18next";
 
 export default function Portfolio() {
   const { data: projects, isLoading } = useProjects();
+  const { t } = useTranslation();
 
   if (isLoading) {
     return (
@@ -21,17 +23,17 @@ export default function Portfolio() {
       <div className="container-padding">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
-            <span className="text-primary font-semibold tracking-wide uppercase text-sm">Experiência Profissional</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Experiência e Projetos Relevantes</h2>
+            <span className="text-primary font-semibold tracking-wide uppercase text-sm">{t("portfolio.badge")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">{t("portfolio.title")}</h2>
             <p className="text-muted-foreground mt-4 text-lg">
-              Atuação em projetos enterprise de grande escala, produtos digitais e soluções de IA corporativa.
+              {t("portfolio.description")}
             </p>
           </div>
         </div>
 
         {(!projects || projects.length === 0) ? (
           <div className="text-center py-12 border-2 border-dashed border-border rounded-xl">
-            <p className="text-muted-foreground">Carregando experiências...</p>
+            <p className="text-muted-foreground">{t("portfolio.loading")}</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,7 +50,7 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-2 mb-3">
                       {project.tags?.map(tag => (
                         <Badge key={tag} variant="secondary" className="text-[10px] uppercase tracking-wider font-bold">
-                          {tag}
+                          {t(`portfolio.tags.${tag}`, tag)}
                         </Badge>
                       ))}
                     </div>
@@ -59,15 +61,15 @@ export default function Portfolio() {
                   <CardContent className="flex-1 space-y-4 pt-4">
                     <div className="space-y-4 text-sm">
                       <div>
-                        <span className="font-semibold text-foreground/90 block mb-1">Desafio</span>
+                        <span className="font-semibold text-foreground/90 block mb-1">{t("portfolio.challenge")}</span>
                         <p className="text-muted-foreground leading-relaxed">{project.problem}</p>
                       </div>
                       <div>
-                        <span className="font-semibold text-foreground/90 block mb-1">Contexto e Responsabilidades</span>
+                        <span className="font-semibold text-foreground/90 block mb-1">{t("portfolio.context")}</span>
                         <p className="text-muted-foreground leading-relaxed">{project.solution}</p>
                       </div>
                       <div>
-                        <span className="font-semibold text-foreground/90 block mb-1">Destaque de Impacto</span>
+                        <span className="font-semibold text-foreground/90 block mb-1">{t("portfolio.impact")}</span>
                         <p className="text-muted-foreground leading-relaxed">{project.result}</p>
                       </div>
                     </div>
@@ -76,11 +78,11 @@ export default function Portfolio() {
                   <CardFooter className="pt-4 border-t border-border/50 bg-muted/5 h-16">
                     {project.tags?.includes("Confidencial") ? (
                       <span className="text-xs text-muted-foreground/60 italic flex items-center gap-2 ">
-                        Projeto interno / confidencial - sem link público
+                        {t("portfolio.confidential")}
                       </span>
                     ) : (
                       <Button variant="ghost" className="w-full justify-between group-hover:text-primary text-xs" disabled>
-                        Detalhes sob consulta
+                        {t("portfolio.details")}
                         <ExternalLink className="w-3 h-3 ml-2" />
                       </Button>
                     )}

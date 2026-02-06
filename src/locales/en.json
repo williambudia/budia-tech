@@ -1,0 +1,257 @@
+{
+    "navbar": {
+        "home": "Home",
+        "services": "Services",
+        "process": "Process",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "cta": "Chat on WhatsApp",
+        "backToHome": "Back to Home"
+    },
+    "hero": {
+        "badge": "Web Development Agency",
+        "title": "We turn your ideas into",
+        "titleStrong": "Digital Reality",
+        "description": "We develop modern websites, systems, and apps using the best technologies on the market. Focused on performance, design, and results.",
+        "cta": "Start Project",
+        "portfolio": "View Portfolio",
+        "stat1": "Projects Delivered",
+        "stat3": "Satisfied Clients",
+        "benefits": {
+            "design": "Premium Design",
+            "performance": "High Performance",
+            "support": "Dedicated Support"
+        },
+        "floatingCard": {
+            "title": "Performance",
+            "value": "99% Optimized"
+        }
+    },
+    "promoBanner": {
+        "badge": "Special Offer",
+        "titlePart1": "Your professional website",
+        "titlePrice": "starting at R$ 999",
+        "description": "The digital presence your company deserves. Fast, professional, and Google-ready. Complete package for a limited time.",
+        "cta": "Get this deal"
+    },
+    "promotional": {
+        "hero": {
+            "badge": "Limited Time Offer",
+            "titleStart": "Your Business Needs a",
+            "titleHighlight": "Professional Website",
+            "titleEnd": "Now.",
+            "description": "Stop losing customers to the competition. Get a fast, modern, sales-ready website without the complexity and high costs of traditional agencies.",
+            "cta": "Get this Offer",
+            "whatsappHint": "Tap to chat on WhatsApp"
+        },
+        "included": {
+            "title": "Everything you need to grow",
+            "subtitle": "No fine print. The complete package to digitize your company.",
+            "items": {
+                "design": "Premium & Responsive Design",
+                "performance": "Fast Website (Top Performance)",
+                "seo": "Optimized for Google (SEO)",
+                "whatsapp": "Floating WhatsApp Button",
+                "hosting": "Hosting Included (1st year)",
+                "ssl": "Security Certificate (SSL)",
+                "social": "Social Media Integration",
+                "email": "Professional E-mail",
+                "support": "Dedicated Support"
+            }
+        },
+        "audience": {
+            "title": "Who is this package for?",
+            "subtitle": "Created especially for those who want fast results without headaches.",
+            "smallBusiness": {
+                "title": "Small Businesses",
+                "desc": "Local stores, shops, and offices."
+            },
+            "serviceProviders": {
+                "title": "Service Providers",
+                "desc": "Lawyers, dentists, psychologists, technicians."
+            },
+            "startups": {
+                "title": "Local Startups",
+                "desc": "Those starting out and needing credibility."
+            },
+            "whyNow": {
+                "title": "Why now?",
+                "desc": "The digital market is growing fast. If you're not online, you don't exist.",
+                "check1": "Delivery in up to 7 days",
+                "check2": "Satisfaction Guaranteed",
+                "check3": "No monthly fees (The site is yours)"
+            }
+        },
+        "pricing": {
+            "title": "One-time Investment",
+            "badge": "POPULAR",
+            "packageName": "Professional Website Package",
+            "oldPrice": "2,500",
+            "price": "999",
+            "cents": ".00",
+            "installment": "Installment payment available via credit card.",
+            "cta": "Secure My Website Now",
+            "disclaimer": "*Price valid for Landing Pages and Institutional Sites up to 5 sections.\nLimited time promotion, subject to schedule availability."
+        },
+        "finalCta": {
+            "title": "Don't leave it for later.",
+            "description": "Your company deserves a quality digital presence. Let's build this together?",
+            "button": "Talk to a Consultant"
+        },
+        "whatsappMessage": "Hello, I saw the 999 website promotion and would like more details!"
+    },
+    "footer": {
+        "description": "Transforming ideas into high-impact digital solutions. Technology, design, and strategy for companies that want to grow.",
+        "menuTitle": "Menu",
+        "contactTitle": "Contact",
+        "rights": "All rights reserved."
+    },
+    "services": {
+        "sectionBadge": "What we do",
+        "sectionTitle": "Complete Solutions",
+        "institutional": {
+            "title": "Institutional Websites",
+            "desc": "Present your company with elegance and professionalism. Responsive design that works on any device."
+        },
+        "landing": {
+            "title": "Landing Pages",
+            "desc": "High-conversion pages focused on selling a product or capturing leads for your marketing campaigns."
+        },
+        "seo": {
+            "title": "Performance & SEO",
+            "desc": "Optimization so your site loads quickly and ranks well in Google searches."
+        },
+        "support": {
+            "title": "Maintenance & Support",
+            "desc": "We don't leave you hanging. Update packages, security, and continuous improvements for your project."
+        },
+        "systems": {
+            "title": "Web Systems",
+            "desc": "Complex custom solutions. Process management, member areas, and API integrations."
+        },
+        "dashboards": {
+            "title": "Dashboards",
+            "desc": "Visualize your business data in real-time with intuitive and powerful administrative panels."
+        }
+    },
+    "process": {
+        "title": "How we work",
+        "subtitle": "A transparent and organized process, from the first coffee to the site launch.",
+        "step1": {
+            "title": "Understanding",
+            "desc": "Initial meeting to understand your goals, target audience, and specific business needs."
+        },
+        "step2": {
+            "title": "Proposal & Strategy",
+            "desc": "We present a complete proposal with defined scope, timeline, technologies used, and visual direction."
+        },
+        "step3": {
+            "title": "Development",
+            "desc": "We put the project into practice with best development practices, keeping you informed about every stage of evolution."
+        },
+        "step4": {
+            "title": "Delivery & Support",
+            "desc": "We perform the official launch, with platform usage training and post-delivery support to ensure the best results."
+        }
+    },
+    "audience": {
+        "title": "Who we develop for",
+        "description": "We develop custom solutions for your niche, understanding your specific needs and challenges.",
+        "agro": {
+            "title": "Agribusiness",
+            "desc": "Robust technological solutions for producers and agribusiness companies seeking strategic digital presence."
+        },
+        "commerce": {
+            "title": "Local Commerce",
+            "desc": "Stores and retailers wanting to expand sales and be found by local customers."
+        },
+        "services": {
+            "title": "Service Providers",
+            "desc": "Lawyers, doctors, consultants, and technicians who wish to strengthen their authority and attract more clients."
+        },
+        "b2b": {
+            "title": "B2B Companies",
+            "desc": "Digital solutions for industries and distributors seeking efficiency with digital catalogs and integrated management."
+        },
+        "institutional": {
+            "title": "Institutional Websites",
+            "desc": "Strengthen your company's image with an elegant, professional, and fully responsive website."
+        },
+        "seo": {
+            "title": "Performance & SEO",
+            "desc": "More speed, visibility, and better rankings on Google."
+        },
+        "observability": {
+            "title": "Observability",
+            "desc": "Do you have a system but need to monitor logs and metrics to make fast decisions and prevent issues? We help you gain complete visibility of your operation."
+        },
+        "systems": {
+            "title": "WEB Systems",
+            "desc": "Custom web solutions to automate processes, integrate systems, and scale your business."
+        }
+    },
+    "portfolio": {
+        "badge": "Professional Experience",
+        "title": "Experience and Relevant Projects",
+        "description": "Work on large-scale enterprise projects, digital products, and corporate AI solutions.",
+        "loading": "Loading experiences...",
+        "challenge": "Challenge",
+        "context": "Context and Responsibilities",
+        "impact": "Impact Highlight",
+        "confidential": "Internal / confidential project - no public link",
+        "details": "Details upon request",
+        "tags": {
+            "Corporativo": "Corporate",
+            "Sistemas Internos": "Internal Systems",
+            "Confidencial": "Confidential",
+            "Institucional": "Institutional",
+            "SEO": "SEO",
+            "E-commerce": "E-commerce",
+            "Produto Digital": "Digital Product",
+            "Sustentabilidade": "Sustainability",
+            "IA": "AI",
+            "RAG": "RAG",
+            "Automação": "Automation",
+            "Mobile": "Mobile",
+            "Performance": "Performance"
+        }
+    },
+    "contact": {
+        "badge": "Contact",
+        "title": "Let's talk?",
+        "description": "Have a project in mind or need a custom solution? We are ready to help your company grow.",
+        "whatsapp": "WhatsApp",
+        "email": "E-mail",
+        "location": "Location",
+        "fullLocation": "Sorriso, MT — National Service",
+        "fallback": "Prefer to talk now?",
+        "whatsappAction": "Chat on WhatsApp",
+        "form": {
+            "name": "Full Name",
+            "namePlaceholder": "Your name",
+            "email": "E-mail",
+            "emailPlaceholder": "you@email.com",
+            "subject": "Subject",
+            "subjectPlaceholder": "Ex: New project",
+            "message": "Message",
+            "messagePlaceholder": "Tell us a bit about your needs...",
+            "sending": "Sending...",
+            "submit": "Send Message",
+            "successTitle": "Message sent successfully!",
+            "successDesc": "We will be in touch shortly 🚀",
+            "errorTitle": "Error sending",
+            "errorDesc": "Try again or contact us via WhatsApp."
+        }
+    },
+    "finalCta": {
+        "title": "Ready to take your business to the next level?",
+        "description": "Don't miss any more opportunities. Have a professional digital presence and start selling more today.",
+        "button": "Request Free Quote",
+        "disclaimer": "Exclusive service for Sorriso and the Northern Mato Grosso region."
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "description": "The page you are looking for doesn't exist or has been moved.",
+        "button": "Back to Home"
+    }
+}

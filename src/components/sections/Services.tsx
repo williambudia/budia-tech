@@ -1,49 +1,51 @@
 import { Layout, Smartphone, Gauge, Settings, Database, BarChart3 } from "lucide-react";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
-
-const services = [
-  {
-    icon: Layout,
-    title: "Sites Institucionais",
-    description: "Apresente sua empresa com elegância e profissionalismo. Design responsivo que funciona em qualquer dispositivo."
-  },
-  {
-    icon: Smartphone,
-    title: "Landing Pages",
-    description: "Páginas de alta conversão focadas em vender um produto ou capturar leads para suas campanhas de marketing."
-  },
-  {
-    icon: Gauge,
-    title: "Performance & SEO",
-    description: "Otimização para que seu site carregue rápido e apareça bem posicionado nas buscas do Google."
-  },
-  {
-    icon: Settings,
-    title: "Manutenção & Suporte",
-    description: "Não te deixamos na mão. Pacotes de atualização, segurança e melhorias contínuas para seu projeto."
-  },
-  {
-    icon: Database,
-    title: "Sistemas Web",
-    description: "Soluções complexas sob medida. Gestão de processos, áreas de membros e integrações via API.",
-    highlight: true
-  },
-  {
-    icon: BarChart3,
-    title: "Dashboards",
-    description: "Visualize dados do seu negócio em tempo real com painéis administrativos intuitivos e poderosos.",
-    highlight: true
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: Layout,
+      title: t("services.institutional.title"),
+      description: t("services.institutional.desc")
+    },
+    {
+      icon: Smartphone,
+      title: t("services.landing.title"),
+      description: t("services.landing.desc")
+    },
+    {
+      icon: Gauge,
+      title: t("services.seo.title"),
+      description: t("services.seo.desc")
+    },
+    {
+      icon: Settings,
+      title: t("services.support.title"),
+      description: t("services.support.desc")
+    },
+    {
+      icon: Database,
+      title: t("services.systems.title"),
+      description: t("services.systems.desc"),
+      highlight: true
+    },
+    {
+      icon: BarChart3,
+      title: t("services.dashboards.title"),
+      description: t("services.dashboards.desc"),
+      highlight: true
+    }
+  ];
 
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="container-padding relative z-10">
         <div className="mb-16">
-          <span className="text-primary font-semibold tracking-wide uppercase text-sm">O que fazemos</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">Soluções Completas</h2>
+          <span className="text-primary font-semibold tracking-wide uppercase text-sm">{t("services.sectionBadge")}</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">{t("services.sectionTitle")}</h2>
           <div className="h-1 w-20 bg-primary rounded-full"></div>
         </div>
 

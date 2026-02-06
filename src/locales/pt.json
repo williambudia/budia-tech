@@ -1,0 +1,257 @@
+{
+    "navbar": {
+        "home": "Início",
+        "services": "Serviços",
+        "process": "Processo",
+        "portfolio": "Portfólio",
+        "contact": "Fale conosco",
+        "cta": "Falar no WhatsApp",
+        "backToHome": "Voltar para Início"
+    },
+    "hero": {
+        "badge": "Agência de Desenvolvimento Web",
+        "title": "Transformamos suas ideias em",
+        "titleStrong": "Realidade Digital",
+        "description": "Desenvolvemos sites, sistemas e aplicativos modernos com as melhores tecnologias do mercado. Foco em performance, design e resultados.",
+        "cta": "Começar Projeto",
+        "portfolio": "Ver Portfólio",
+        "stat1": "Projetos Entregues",
+        "stat3": "Clientes Satisfeitos",
+        "benefits": {
+            "design": "Design Premium",
+            "performance": "Alta Performance",
+            "support": "Suporte Dedicado"
+        },
+        "floatingCard": {
+            "title": "Performance",
+            "value": "99% Otimizada"
+        }
+    },
+    "promoBanner": {
+        "badge": "Oferta Especial",
+        "titlePart1": "Seu site profissional",
+        "titlePrice": "a partir de R$ 999",
+        "description": "A presença digital que sua empresa merece. Rápido, profissional e pronto para o Google. Pacote completo por tempo limitado.",
+        "cta": "Quero aproveitar a promoção"
+    },
+    "promotional": {
+        "hero": {
+            "badge": "Oferta por Tempo Limitado",
+            "titleStart": "Seu Negócio Precisa de um",
+            "titleHighlight": "Site Profissional",
+            "titleEnd": "Agora.",
+            "description": "Pare de perder clientes para a concorrência. Tenha um site rápido, moderno e pronto para vender, sem a complexidade e os custos altos das agências tradicionais.",
+            "cta": "Quero Aproveitar a Oferta",
+            "whatsappHint": "Toque para falar no WhatsApp"
+        },
+        "included": {
+            "title": "Tudo o que você precisa para crescer",
+            "subtitle": "Sem letras miúdas. O pacote completo para digitalizar sua empresa.",
+            "items": {
+                "design": "Design Premium e Responsivo",
+                "performance": "Site Rápido (Top Performance)",
+                "seo": "Otimizado para o Google (SEO)",
+                "whatsapp": "Botão de WhatsApp Flutuante",
+                "hosting": "Hospedagem Inclusa (1º ano)",
+                "ssl": "Certificado de Segurança (SSL)",
+                "social": "Integração com Redes Sociais",
+                "email": "E-mail Profissional",
+                "support": "Suporte Dedicado"
+            }
+        },
+        "audience": {
+            "title": "Para quem é este pacote?",
+            "subtitle": "Criado especialmente para quem quer resultado rápido sem dor de cabeça.",
+            "smallBusiness": {
+                "title": "Pequenos Negócios",
+                "desc": "Lojas, comércios e escritórios locais."
+            },
+            "serviceProviders": {
+                "title": "Prestadores de Serviço",
+                "desc": "Advogados, dentistas, psicólogos, técnicos."
+            },
+            "startups": {
+                "title": "Startups Locais",
+                "desc": "Quem está começando e precisa de credibilidade."
+            },
+            "whyNow": {
+                "title": "Por que agora?",
+                "desc": "O mercado digital de Sorriso e região está crescendo. Quem não está na internet, não existe.",
+                "check1": "Entrega em até 7 dias",
+                "check2": "Garantia de Satisfação",
+                "check3": "Sem mensalidade (Site é seu)"
+            }
+        },
+        "pricing": {
+            "title": "Investimento Único",
+            "badge": "POPULAR",
+            "packageName": "Pacote Site Profissional",
+            "oldPrice": "2.500",
+            "price": "999",
+            "cents": ",00",
+            "installment": "Parcelamos no cartão de crédito.",
+            "cta": "Garantir Meu Site Agora",
+            "disclaimer": "*Preço válido para Landing Pages e Sites Institucionais de até 5 seções.\nPromoção por tempo limitado, sujeita a disponibilidade de agenda."
+        },
+        "finalCta": {
+            "title": "Não deixe para depois.",
+            "description": "Sua empresa merece uma presença digital de qualidade. Vamos construir isso juntos?",
+            "button": "Falar com Consultor"
+        },
+        "whatsappMessage": "Olá, vi a promoção do site por 999 e gostaria de mais detalhes!"
+    },
+    "footer": {
+        "description": "Transformando ideias em soluções digitais de alto impacto. Tecnologia, design e estratégia para empresas que querem crescer.",
+        "menuTitle": "Menu",
+        "contactTitle": "Contato",
+        "rights": "Todos os direitos reservados."
+    },
+    "services": {
+        "sectionBadge": "O que fazemos",
+        "sectionTitle": "Soluções Completas",
+        "institutional": {
+            "title": "Sites Institucionais",
+            "desc": "Apresente sua empresa com elegância e profissionalismo. Design responsivo que funciona em qualquer dispositivo."
+        },
+        "landing": {
+            "title": "Landing Pages",
+            "desc": "Páginas de alta conversão focadas em vender um produto ou capturar leads para suas campanhas de marketing."
+        },
+        "seo": {
+            "title": "Performance & SEO",
+            "desc": "Otimização para que seu site carregue rápido e apareça bem posicionado nas buscas do Google."
+        },
+        "support": {
+            "title": "Manutenção & Suporte",
+            "desc": "Não te deixamos na mão. Pacotes de atualização, segurança e melhorias contínuas para seu projeto."
+        },
+        "systems": {
+            "title": "Sistemas Web",
+            "desc": "Soluções complexas sob medida. Gestão de processos, áreas de membros e integrações via API."
+        },
+        "dashboards": {
+            "title": "Dashboards",
+            "desc": "Visualize dados do seu negócio em tempo real com painéis administrativos intuitivos e poderosos."
+        }
+    },
+    "process": {
+        "title": "Como trabalhamos",
+        "subtitle": "Um processo transparente e organizado, do primeiro café até o site no ar.",
+        "step1": {
+            "title": "Entendimento",
+            "desc": "Reunião inicial para compreender seus objetivos, público-alvo e necessidades específicas do negócio."
+        },
+        "step2": {
+            "title": "Proposta e Estratégia",
+            "desc": "Apresentamos uma proposta completa, com escopo definido, cronograma, tecnologias utilizadas e direcionamento visual do projeto."
+        },
+        "step3": {
+            "title": "Desenvolvimento",
+            "desc": "Colocamos o projeto em prática com as melhores práticas de desenvolvimento, mantendo você informado sobre cada etapa da evolução."
+        },
+        "step4": {
+            "title": "Entrega e Suporte",
+            "desc": "Realizamos o lançamento oficial do projeto, com treinamento para uso da plataforma e acompanhamento pós-entrega para garantir os melhores resultados."
+        }
+    },
+    "audience": {
+        "title": "Para quem desenvolvemos",
+        "description": "Desenvolvemos soluções sob medida para o seu nicho de atuação, entendendo suas necessidades e desafios específicos.",
+        "agro": {
+            "title": "Agronegócio",
+            "desc": "Soluções tecnológicas robustas para produtores e empresas do agro que buscam presença digital estratégica."
+        },
+        "commerce": {
+            "title": "Comércio Local",
+            "desc": "Lojas e varejistas que querem expandir vendas e serem encontrados por clientes da região."
+        },
+        "services": {
+            "title": "Prestadores de Serviço",
+            "desc": "Advogados, médicos, consultores e técnicos que desejam fortalecer sua autoridade e atrair mais clientes."
+        },
+        "b2b": {
+            "title": "Empresas B2B",
+            "desc": "Soluções digitais para indústrias e distribuidoras que buscam eficiência com catálogos digitais e gestão integrada."
+        },
+        "institutional": {
+            "title": "Sites Institucionais",
+            "desc": "Fortaleça a imagem da sua empresa com um site elegante, profissional e totalmente responsivo."
+        },
+        "seo": {
+            "title": "Desempenho e SEO",
+            "desc": "Mais velocidade, mais visibilidade e melhores posições no Google."
+        },
+        "observability": {
+            "title": "Observabilidade",
+            "desc": "Já possui um sistema, mas precisa monitorar logs e métricas para tomar decisões rápidas e prevenir problemas? Nós ajudamos você a ganhar visibilidade completa da sua operação."
+        },
+        "systems": {
+            "title": "Sistemas WEB",
+            "desc": "Soluções web personalizadas para automatizar processos, integrar sistemas e escalar seu negócio."
+        }
+    },
+    "portfolio": {
+        "badge": "Experiência Profissional",
+        "title": "Experiência e Projetos Relevantes",
+        "description": "Atuação em projetos enterprise de grande escala, produtos digitais e soluções de IA corporativa.",
+        "loading": "Carregando experiências...",
+        "challenge": "Desafio",
+        "context": "Contexto e Responsabilidades",
+        "impact": "Destaque de Impacto",
+        "confidential": "Projeto interno / confidencial - sem link público",
+        "details": "Detalhes sob consulta",
+        "tags": {
+            "Corporativo": "Corporativo",
+            "Sistemas Internos": "Sistemas Internos",
+            "Confidencial": "Confidencial",
+            "Institucional": "Institucional",
+            "SEO": "SEO",
+            "E-commerce": "E-commerce",
+            "Produto Digital": "Produto Digital",
+            "Sustentabilidade": "Sustentabilidade",
+            "IA": "IA",
+            "RAG": "RAG",
+            "Automação": "Automação",
+            "Mobile": "Mobile",
+            "Performance": "Performance"
+        }
+    },
+    "contact": {
+        "badge": "Contato",
+        "title": "Vamos conversar?",
+        "description": "Tem um projeto em mente ou precisa de uma solução sob medida? Estamos prontos para ajudar sua empresa a crescer.",
+        "whatsapp": "WhatsApp",
+        "email": "E-mail",
+        "location": "Localização",
+        "fullLocation": "Sorriso, MT — Atendimento Nacional",
+        "fallback": "Prefere falar agora?",
+        "whatsappAction": "Chamar no WhatsApp",
+        "form": {
+            "name": "Nome Completo",
+            "namePlaceholder": "Seu nome",
+            "email": "E-mail",
+            "emailPlaceholder": "seu@email.com",
+            "subject": "Assunto",
+            "subjectPlaceholder": "Ex: Novo projeto",
+            "message": "Mensagem",
+            "messagePlaceholder": "Conte-nos um pouco sobre sua necessidade...",
+            "sending": "Enviando...",
+            "submit": "Enviar Mensagem",
+            "successTitle": "Mensagem enviada com sucesso!",
+            "successDesc": "Entraremos em contato em breve 🚀",
+            "errorTitle": "Erro ao enviar",
+            "errorDesc": "Tente novamente ou fale conosco pelo WhatsApp."
+        }
+    },
+    "finalCta": {
+        "title": "Pronto para levar seu negócio para o próximo nível?",
+        "description": "Não perca mais oportunidades. Tenha uma presença digital profissional e comece a vender mais hoje mesmo.",
+        "button": "Solicitar Orçamento Grátis",
+        "disclaimer": "Atendimento exclusivo para Sorriso e região do Norte de Mato Grosso."
+    },
+    "notFound": {
+        "title": "Página não encontrada",
+        "description": "O endereço que você digitou não existe ou foi removido.",
+        "button": "Voltar para o Início"
+    }
+}
