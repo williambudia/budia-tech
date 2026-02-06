@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Rocket } from "lucide-react";
+import { Menu, X, Rocket, ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
+import { useLocation, Link } from "wouter";
 
 const navItems = [
   { label: "Início", href: "#hero" },
@@ -16,6 +17,8 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const isPromotional = location === "/promocao";
 
   /* ===========================
      Detecta scroll
@@ -33,6 +36,12 @@ export function Navbar() {
      Scroll real com offset
   ============================ */
   const doScroll = (id: string) => {
+    // Se não estiver na home e tentar navegar para âncora, vai para home primeiro
+    if (location !== "/" && id.startsWith("#")) {
+      window.location.href = "/" + id;
+      return;
+    }
+
     const element = document.querySelector(id);
     if (!element) return;
 
@@ -75,29 +84,37 @@ export function Navbar() {
     >
       <div className="container-padding flex items-center justify-between">
         {/* Logo */}
-        <div
-          className="flex items-center gap-2 font-display font-bold text-xl md:text-2xl cursor-pointer"
-          onClick={() => handleNavClick("#hero")}
-        >
-          <div className="bg-primary/10 p-2 rounded-lg">
-            <Rocket className="w-6 h-6 text-primary" />
+        <Link href="/">
+          <div className="flex items-center gap-2 font-display font-bold text-xl md:text-2xl cursor-pointer">
+            <div className="bg-primary/10 p-2 rounded-lg">
+              <Rocket className="w-6 h-6 text-primary" />
+            </div>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground">
+              BudiaTech
+            </span>
           </div>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-foreground">
-            BudiaTech
-          </span>
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <button
-              key={item.label}
-              onClick={() => handleNavClick(item.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </button>
-          ))}
+          {!isPromotional ? (
+            navItems.map((item) => (
+              <button
+                key={item.label}
+                onClick={() => handleNavClick(item.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                {item.label}
+              </button>
+            ))
+          ) : (
+            <Link href="/">
+              <Button variant="ghost" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Voltar para Início
+              </Button>
+            </Link>
+          )}
         </div>
 
         {/* Desktop Actions */}
@@ -116,19 +133,21 @@ export function Navbar() {
         {/* Mobile Toggle */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>
+          {!isPromotional && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </Button>
+          )}
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Apenas na Home) */}
       <div>
-        {isMobileMenuOpen && (
+        {isMobileMenuOpen && !isPromotional && (
           <MotionSafeDiv
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
