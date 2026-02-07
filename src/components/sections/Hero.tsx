@@ -96,8 +96,7 @@ export function Hero() {
                 {/* Content Area with Generated Image */}
                 <div className="flex-1 relative bg-background overflow-hidden">
                   <img
-                    loading="lazy"
-                    decoding="async"
+                    decoding="sync"
                     fetchPriority="high"
                     src={heroDashboard}
                     alt="Dashboard Mockup"
