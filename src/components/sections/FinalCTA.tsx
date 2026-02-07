@@ -27,7 +27,7 @@ export default function FinalCTA() {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover-elevate active-elevate-2 text-lg px-8 h-14 rounded-full shadow"
-              onClick={() => window.open("https://wa.me/5555996870030", "_blank")}
+              onClick={() => window.open("https://wa.me/5566996870030", "_blank")}
             >
               <MessageCircle className="mr-2 w-5 h-5" />
               {t("finalCta.button")}

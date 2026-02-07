@@ -233,7 +233,7 @@ export default function Contact() {
                                 <p className="text-center text-sm text-muted-foreground">
                                     {t("contact.fallback")}{" "}
                                     <a
-                                        href="https://wa.me/5555996870030"
+                                        href="https://wa.me/5566996870030"
                                         className="text-primary font-semibold hover:underline"
                                         target="_blank"
                                         rel="noopener noreferrer"
