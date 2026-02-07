@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
 
@@ -49,9 +50,37 @@ const USFlag = () => (
 
 export function LanguageToggle() {
     const { i18n } = useTranslation();
+    const [currentLang, setCurrentLang] = useState<string>("pt");
+
+    // Normaliza o idioma (pt-BR -> pt, en-US -> en)
+    const normalizeLanguage = (lang: string): string => {
+        return lang.startsWith("pt") ? "pt" : "en";
+    };
+
+    // Sincroniza o estado local com o idioma do i18n na montagem e mudanças
+    useEffect(() => {
+        const normalized = normalizeLanguage(i18n.language);
+        setCurrentLang(normalized);
+
+        // Garante que o i18n está usando o idioma normalizado
+        if (i18n.language !== normalized) {
+            i18n.changeLanguage(normalized);
+        }
+
+        // Listener para mudanças de idioma
+        const handleLanguageChange = (lng: string) => {
+            setCurrentLang(normalizeLanguage(lng));
+        };
+
+        i18n.on("languageChanged", handleLanguageChange);
+
+        return () => {
+            i18n.off("languageChanged", handleLanguageChange);
+        };
+    }, [i18n]);
 
     const toggleLanguage = () => {
-        const newLang = i18n.language === "pt" ? "en" : "pt";
+        const newLang = currentLang === "pt" ? "en" : "pt";
         i18n.changeLanguage(newLang);
     };
 
@@ -61,15 +90,15 @@ export function LanguageToggle() {
             size="icon"
             onClick={toggleLanguage}
             className="rounded-full w-10 h-10 hover:bg-muted/50 transition-all border border-transparent hover:border-border"
-            title={i18n.language === "pt" ? "Switch to English" : "Mudar para Português"}
+            title={currentLang === "pt" ? "Switch to English" : "Mudar para Português"}
         >
-            {i18n.language === "pt" ? (
+            {currentLang === "pt" ? (
                 <BrazilFlag />
             ) : (
                 <USFlag />
             )}
             <span className="sr-only">
-                {i18n.language === "pt" ? "Mudar para Inglês" : "Mudar para Português"}
+                {currentLang === "pt" ? "Mudar para Inglês" : "Mudar para Português"}
             </span>
         </Button>
     );
