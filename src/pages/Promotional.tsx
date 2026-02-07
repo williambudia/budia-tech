@@ -1,6 +1,7 @@
 import { Button } from "../components/ui/button";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
+import { SEO } from "../components/layout/SEO";
 import { MotionSafeDiv } from "../components/motion/MotionSafeDiv";
 import { CheckCircle2, MessageCircle, ArrowRight, Zap, Target, ShieldCheck, Rocket } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -33,6 +34,7 @@ export default function Promotional() {
 
     return (
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/20">
+            <SEO page="promotional" />
             <Navbar />
 
             <main className="pt-24 lg:pt-32">

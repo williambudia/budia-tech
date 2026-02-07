@@ -1,5 +1,6 @@
 import { Switch, Route } from "wouter";
 import { LazyMotion, domAnimation } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "./components/ui/toaster";
 import { TooltipProvider } from "./components/ui/tooltip";
 import NotFound from "./pages/not-found";
@@ -20,13 +21,15 @@ function Router() {
 
 function App() {
   return (
-    <LazyMotion features={domAnimation}>
-      <ScrollToTop />
-      <TooltipProvider>
-        <Router />
-        <Toaster />
-      </TooltipProvider>
-    </LazyMotion>
+    <HelmetProvider>
+      <LazyMotion features={domAnimation}>
+        <ScrollToTop />
+        <TooltipProvider>
+          <Router />
+          <Toaster />
+        </TooltipProvider>
+      </LazyMotion>
+    </HelmetProvider>
   );
 }
 

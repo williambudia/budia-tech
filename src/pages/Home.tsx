@@ -1,5 +1,6 @@
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
+import { SEO } from "../components/layout/SEO";
 import { Hero } from "../components/sections/Hero";
 import { PromoBanner } from "../components/sections/PromoBanner";
 import { MessageCircle } from "lucide-react";
@@ -24,6 +25,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative selection:bg-primary/20">
+      <SEO page="home" />
+
       {/* Scroll Progress Bar */}
       <MotionSafeDiv
         className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-[100]"

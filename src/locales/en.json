@@ -253,5 +253,31 @@
         "title": "Page Not Found",
         "description": "The page you are looking for doesn't exist or has been moved.",
         "button": "Back to Home"
+    },
+    "seo": {
+        "home": {
+            "title": "BudiaTech - Web Development & Digital Solutions",
+            "description": "Web development agency in Sorriso, MT. We create modern websites, systems, and apps focused on performance, design, and results.",
+            "keywords": "web development, website creation, digital agency, Sorriso MT, professional websites, landing pages, SEO"
+        },
+        "promotional": {
+            "title": "Professional Website for R$ 999 - Limited Offer | BudiaTech",
+            "description": "Get your complete professional website for only R$ 999. Premium design, hosting included, Google optimized. Delivery in up to 7 days.",
+            "keywords": "cheap website, professional website, website creation, website promotion, Sorriso MT, landing page"
+        },
+        "og": {
+            "siteName": "BudiaTech",
+            "locale": "en_US",
+            "localeAlternate": "pt_BR"
+        },
+        "structuredData": {
+            "organizationName": "BudiaTech",
+            "organizationDescription": "Web development agency specialized in modern websites, systems, and applications.",
+            "address": {
+                "city": "Sorriso",
+                "state": "MT",
+                "country": "BR"
+            }
+        }
     }
 }

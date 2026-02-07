@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactMessageSchema, type InsertContactMessage } from "../../schema";
+import { z } from "zod";
 import {
     Form,
     FormControl,
@@ -17,14 +17,23 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { MotionSafeDiv } from "../motion/MotionSafeDiv";
 import { useTranslation } from "react-i18next";
 
+const contactMessageSchema = z.object({
+    name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
+    email: z.string().email("E-mail inválido"),
+    subject: z.string().min(3, "Assunto deve ter pelo menos 3 caracteres"),
+    message: z.string().min(10, "Mensagem deve ter pelo menos 10 caracteres"),
+});
+
+type ContactMessage = z.infer<typeof contactMessageSchema>;
+
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 export default function Contact() {
     const { toast } = useToast();
     const { t } = useTranslation();
 
-    const form = useForm<InsertContactMessage>({
-        resolver: zodResolver(insertContactMessageSchema),
+    const form = useForm<ContactMessage>({
+        resolver: zodResolver(contactMessageSchema),
         defaultValues: {
             name: "",
             email: "",
@@ -33,7 +42,7 @@ export default function Contact() {
         },
     });
 
-    async function onSubmit(data: InsertContactMessage) {
+    async function onSubmit(data: ContactMessage) {
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",

@@ -253,5 +253,31 @@
         "title": "Página não encontrada",
         "description": "O endereço que você digitou não existe ou foi removido.",
         "button": "Voltar para o Início"
+    },
+    "seo": {
+        "home": {
+            "title": "BudiaTech - Desenvolvimento Web e Soluções Digitais",
+            "description": "Agência de desenvolvimento web em Sorriso, MT. Criamos sites, sistemas e aplicativos modernos com foco em performance, design e resultados.",
+            "keywords": "desenvolvimento web, criação de sites, agência digital, Sorriso MT, sites profissionais, landing pages, SEO"
+        },
+        "promotional": {
+            "title": "Site Profissional por R$ 999 - Oferta Limitada | BudiaTech",
+            "description": "Tenha seu site profissional completo por apenas R$ 999. Design premium, hospedagem inclusa, otimizado para Google. Entrega em até 7 dias.",
+            "keywords": "site barato, site profissional, criação de site, promoção site, Sorriso MT, landing page"
+        },
+        "og": {
+            "siteName": "BudiaTech",
+            "locale": "pt_BR",
+            "localeAlternate": "en_US"
+        },
+        "structuredData": {
+            "organizationName": "BudiaTech",
+            "organizationDescription": "Agência de desenvolvimento web especializada em sites, sistemas e aplicativos modernos.",
+            "address": {
+                "city": "Sorriso",
+                "state": "MT",
+                "country": "BR"
+            }
+        }
     }
 }
