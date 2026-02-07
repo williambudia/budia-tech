@@ -127,7 +127,7 @@ export function Navbar() {
           <Button
             className="rounded-full px-6 font-semibold bg-primary hover:bg-primary/90 shadow shadow-primary/20"
             onClick={() =>
-              window.open("https://wa.me/5566997150476", "_blank")
+              window.open("https://wa.me/5555996870030", "_blank")
             }
           >
             {t("navbar.cta")}
@@ -176,7 +176,7 @@ export function Navbar() {
               <Button
                 className="w-full rounded-full"
                 onClick={() =>
-                  window.open("https://wa.me/5566997150476", "_blank")
+                  window.open("https://wa.me/5555996870030", "_blank")
                 }
               >
                 {t("navbar.cta")}

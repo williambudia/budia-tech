@@ -10,7 +10,7 @@ export default function Promotional() {
 
     const scrollToContact = () => {
         const message = t("promotional.whatsappMessage");
-        window.open(`https://wa.me/5566997150476?text=${encodeURIComponent(message)}`, "_blank");
+        window.open(`https://wa.me/5555996870030?text=${encodeURIComponent(message)}`, "_blank");
     };
 
     const includedItems = [

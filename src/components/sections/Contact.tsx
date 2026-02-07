@@ -104,7 +104,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <p className="font-bold">{t("contact.whatsapp")}</p>
-                                <p className="text-muted-foreground">(66) 99715-0476</p>
+                                <p className="text-muted-foreground">(66) 99687-0030</p>
                             </div>
                         </div>
 
@@ -233,7 +233,7 @@ export default function Contact() {
                                 <p className="text-center text-sm text-muted-foreground">
                                     {t("contact.fallback")}{" "}
                                     <a
-                                        href="https://wa.me/5566997150476"
+                                        href="https://wa.me/5555996870030"
                                         className="text-primary font-semibold hover:underline"
                                         target="_blank"
                                         rel="noopener noreferrer"

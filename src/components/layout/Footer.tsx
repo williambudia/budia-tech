@@ -51,7 +51,7 @@ export function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li>Sorriso, Mato Grosso</li>
               <li>contato@budiatech.com.br</li>
-              <li>(66) 99715-0476</li>
+              <li>(66) 99697-0030</li>
             </ul>
           </div>
         </div>
